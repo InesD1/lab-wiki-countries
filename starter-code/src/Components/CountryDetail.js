@@ -2,10 +2,6 @@ import React from 'react';
 import countries from "../data/countries.json";
 import '../Style/CountryDetail.css';
 
-function printBorders(array){
-
-}
-
 const CountryDetail = (props) => {
     var countryId = props.match.params.cca3
 
