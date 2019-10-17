@@ -1,0 +1,43 @@
+.navbar {
+  margin:0;
+}
+
+.country-info-container {
+  text-align: left;
+  display: flex;
+}
+
+.App .sidebar {
+  display: flex;
+  width: 30vw;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-left: 15px;
+}
+
+.App .sidebar .link {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  border:1px solid #ccc!important
+}
+
+.App .sidebar .link:hover {
+  background-color: #0D90F4;
+  color: white;
+  cursor: pointer;
+}
+
+.App .country-detail-container{
+  width: 70vw;
+  box-sizing: border-box;
+}
+
+@media screen and (max-height: 450px) {
+  .App .sidebar {padding-top: 15px;}
+  .App .sidebar .link {font-size: 18px;}
+}

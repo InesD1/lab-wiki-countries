@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './Style/App.css';
+import {Link, Route} from 'react-router-dom';
+import countries from "./data/countries.json";
+import CountryDetail from "./Components/CountryDetail";
+import Navbar from './Components/Navbar';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="navbar">
+        <Navbar />
+      </div>
+      <div className="country-info-container">
+        <div className="sidebar">
+          {countries.map((country)=> 
+              <Link className="link" to={`/country-detail/${country.cca3}`}>
+                {country.flag} {country.name.official}
+              </Link>
+            )
+          }      
+        </div>
+          <div className="country-detail-container">
+            <Route path="/country-detail/:cca3" component={CountryDetail} />
+          </div>
+        </div>
     </div>
   );
 }

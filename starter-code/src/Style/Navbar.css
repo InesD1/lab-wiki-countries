@@ -1,0 +1,25 @@
+.nav-style {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    width: 100%;
+  }
+
+  .nav-style ul {
+    float: left;
+    color: white;
+  }
+  
+  .nav-style li {
+    display: flex;
+    direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 5px;
+  }
